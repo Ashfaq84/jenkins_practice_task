@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment {
+        //variables defined here can be used by any stage
+        NEW_VERSION = 1.3.0
+    }
+}
 
     stages {
         stage('Build') {
