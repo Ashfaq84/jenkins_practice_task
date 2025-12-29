@@ -20,6 +20,11 @@ pipeline {
         }
 
         stage('Test') {
+            when {
+                expression {
+                params.executeTests
+            }
+            }
             steps {
                 echo 'Testing..'
                 // Here you can define commands for your tests
