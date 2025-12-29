@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven | Maven
+        maven 'Maven'
     }
     environment {
         //variables defined here can be used by any stage
@@ -20,6 +20,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Here you can define commands for your tests
+                bat 'nvm install'
             }
         }
 
